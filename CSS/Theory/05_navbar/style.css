@@ -60,7 +60,56 @@ h2 {
     border-radius: 5px;
     font-weight: bold;
     padding: 5px 15px;
-    background-color: blue;
+    background-color: #2083e0;
     color: #ffff;
     cursor: pointer;
+}
+
+.nav2 {
+    background-color: green;
+    width: 200px;
+    padding: 20px;
+}
+
+.nav2 ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav2 li {
+    margin-bottom: 12px;
+}
+
+.nav2 a {
+    text-decoration: none;
+    display: block;
+    color: #ffff;
+    padding: 10px;
+    text-align: center;
+    border: 2px solid green;
+}
+
+.nav2 a:hover {
+    background-color: #1cbe1c;
+    border: 2px solid #ffffff;
+    border-radius: 9px;
+}
+
+.nav2 .login-btn {
+    color: #ffff;
+    font-weight: bold;
+    font-size: medium;
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #000000;
+    border-radius: 12px;
+    background-color: #2083e0;
+    cursor: pointer;
+    text-align: center;
+}
+
+.nav2 .login-btn:hover {
+    background-color: #ffa500;
+    border: 2px solid #ffffff;
 }
