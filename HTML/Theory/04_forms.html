@@ -37,26 +37,27 @@
 
             <label for="url">
                 Url:
-                <input type="url" name="url" id="">
+                <input type="url" name="url" id="url">
             </label>
 
             <label for="textarea">
                 <textarea name="" id="" rows="5" cols="33"></textarea>
             </label>
 
-            <label for="Games">
+
+            <label for="Basketball">
                 Basketball:
-                <input type="checkbox" name="Basketball" id="">
+                <input type="radio" name="sport" id="Basketball" value="Basketball">
             </label>
 
-            <label for="Games">
+            <label for="Cricket">
                 Cricket:
-                <input type="checkbox" name="Cricket" id="">
+                <input type="radio" name="sport" id="Cricket" value="Cricket">
             </label>
 
-            <label for="Games">
+            <label for="Football">
                 Football:
-                <input type="radio" name="Football" id="">
+                <input type="radio" name="sport" id="Football" value="Football">
             </label>
 
             <label for="Foods">
@@ -78,6 +79,29 @@
             <button type="submit">submit</button>
         </form>
     </div>
+
+    <label for="email">Email Address:</label>
+    <input type="email" id="email" name="email">
+
+    <form action="/submit" method="post">
+        <label for="country">Country:</label>
+        <select id="country" name="country">
+            <option value="USA">USA</option>
+            <option value="Canada">Canada</option>
+            <option value="UK">UK</option>
+        </select>
+    </form>
+
+
+    <form>
+        <input type="button" value="India">
+        <button></button>
+    </form>
+
+    <button>
+        <img src="../Media/My Image.JPG" width="20"> Click Me
+    </button>
+
 </body>
 
 </html>
