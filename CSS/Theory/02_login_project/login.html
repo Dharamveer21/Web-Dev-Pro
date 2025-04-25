@@ -2,24 +2,35 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login page</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Page</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
+    <main id="main-content">
+        <section id="login-card" class="login-card" aria-labelledby="login-heading">
+            <header id="login-header" class="login-header">
+                <h1 id="login-heading">Login</h1>
+            </header>
 
-    <div class="card">
-        <h2>Login</h2>
+            <form id="login-form" class="login-form" action="/login" method="post">
+                <div id="email-group" class="form-group">
+                    <label for="email-input">Email</label>
+                    <input type="email" id="email-input" name="email" placeholder="Enter your email" required />
+                </div>
 
-        <form>
-            <input type="email" name="" id="" placeholder="Email" />
-            <input type="password" name="" id="" placeholder="Password" />
-            <button type="submit">Login</button>
-        </form>
-    </div>
+                <div id="password-group" class="form-group">
+                    <label for="password-input">Password</label>
+                    <input type="password" id="password-input" name="password" placeholder="Enter your password"
+                        required />
+                </div>
 
+                <button id="submit-btn" class="submit-btn" type="submit">Login</button>
+            </form>
+        </section>
+    </main>
 </body>
 
 </html>

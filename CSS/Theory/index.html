@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Signup</title>
+  <!-- Link to external CSS file -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="signup-container">
+    <h1>Signup</h1>
+    <form>
+      <!-- Full Name -->
+      <label for="fullName">Full Name</label>
+      <input
+        type="text"
+        id="fullName"
+        name="fullName"
+        placeholder="Full Name"
+        required
+      />
+
+      <!-- Email -->
+      <label for="email">Email</label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="Email"
+        required
+      />
+
+      <!-- Password -->
+      <label for="password">Password</label>
+      <input
+        type="password"
+        id="password"
+        name="password"
+        placeholder="Password"
+        required
+      />
+
+      <!-- Confirm Password -->
+      <label for="confirmPassword">Confirm Password</label>
+      <input
+        type="password"
+        id="confirmPassword"
+        name="confirmPassword"
+        placeholder="Confirm Password"
+        required
+      />
+
+      <!-- Date (MM/DD/YYYY) -->
+      <label for="birthdate">MM/DD/YYYY</label>
+      <input
+        type="text"
+        id="birthdate"
+        name="birthdate"
+        placeholder="MM/DD/YYYY"
+      />
+
+      <!-- Radio Buttons -->
+      <div class="radio-group">
+        <input
+          type="radio"
+          id="student"
+          name="role"
+          value="student"
+          checked
+        />
+        <label for="student">Student</label>
+
+        <input
+          type="radio"
+          id="employee"
+          name="role"
+          value="employee"
+        />
+        <label for="employee">Employee</label>
+      </div>
+
+      <!-- Terms & Conditions -->
+      <div class="checkbox-group">
+        <input
+          type="checkbox"
+          id="terms"
+          name="terms"
+          required
+        />
+        <label for="terms">I agree to all the Terms and conditions</label>
+      </div>
+
+      <!-- Signup Button -->
+      <button type="submit">Signup</button>
+    </form>
+  </div>
+</body>
+</html>

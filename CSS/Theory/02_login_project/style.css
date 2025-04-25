@@ -9,14 +9,14 @@ body {
     align-items: center;
 }
 
-.card {
+.login-card {
     background-color: antiquewhite;
     border-radius: 10px;
     padding: 30px;
     width: 300px;
 }
 
-h2 {
+h1 {
     color: rgb(29, 45, 197);
     text-align: center;
     margin-bottom: 20px;
@@ -44,5 +44,54 @@ button {
 }
 
 button:hover {
-    background-color: orangered;
+    /* background-color: orangered; */
+    background-color: #009dff;
+}
+
+/* The login card container */
+.login-card {
+    max-width: 400px;
+    /* prevents the card from becoming too wide on large screens */
+    margin: 2rem auto;
+    /* centers the card horizontally */
+    padding: 2rem;
+    border: 2px solid #333;
+    border-radius: 30px;
+    background-color: #f5f5f5;
+    box-sizing: border-box;
+    /* ensures padding/border are included in total width */
+}
+
+/* Form groups to space label and input nicely */
+.form-group {
+    margin-bottom: 1rem;
+}
+
+/* Make labels block elements so they occupy full width above the input */
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+/* Inputs take full width of their container and remain responsive */
+.form-group input {
+    width: 100%;
+    box-sizing: border-box;
+    /* includes padding & border in the total width */
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 400px;
+}
+
+/* Style the submit button similarly */
+.submit-btn {
+    width: 100%;
+    /* optional: button also stretches the full width */
+    padding: 0.75rem;
+    background-color: #ffa500;
+    border: none;
+    border-radius: 490px;
+    font-size: 1rem;
+    color: #fff;
+    cursor: pointer;
 }
