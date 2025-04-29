@@ -46,3 +46,38 @@ document.getElementById('removeLastTask').addEventListener('click', function () 
 
     taskList.lastElementChild.remove();
 });
+
+// Example 6
+document.getElementById('clickMeButton').addEventListener("click", function () {
+    alert("chaiCode");
+});
+
+// Example 7
+document.getElementById("teaList").addEventListener("click", function (event) {
+
+    if (event.target && event.target.matches('.teaItem')) {
+        alert("You Selected: " + event.target.textContent);
+    }
+});
+
+// Example 8
+document.getElementById("feedbackForm").addEventListener("submit", function (event) {
+    event.preventDefault();
+    let feedback = document.getElementById("feedbackInput").value;
+
+    document.getElementById("feedbackDisplay").textContent = `Feedback is: ${feedback}`;
+
+    document.getElementById("feedbackInput").value = "";
+});
+
+// Example 9
+document.addEventListener("DOMContentLoaded", function () {
+    document.getElementById("domStatus").textContent = "DOM fully loaded";
+});
+
+// Example 10
+let num = document.getElementById("toggleHighlight").addEventListener("click", function () {
+    let descriptionText = document.getElementById("descriptionText");
+
+    descriptionText.classList.toggle("highlight");
+});
