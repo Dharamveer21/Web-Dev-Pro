@@ -10,23 +10,29 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // get the new task added by user and put in array and render it
     addTaskButton.addEventListener("click", () => {
-        const taskTest = todoInput.value.trim();
-        if (taskTest === "") return;
+        // get text value for the next task
+        const taskText = todoInput.value.trim();
+        if (taskText === "") return;
 
+        // creating new task as object literal
         const newTask = {
             id: Date.now(),
-            text: taskTest,
+            text: taskText,
             completed: false
         }
 
+        // push the new task in array and render it and update local storage
         tasks.push(newTask);
-        saveTasks();
-        todoInput.value = ""; // clear input
         renderTask(newTask);
+        saveTasks();
+
+        todoInput.value = ""; // clear input field
     });
 
     // Display the tasks on Screen
     function renderTask(task) {
+        // Creating an li for current task and append it into undordered list
+
         // create an li element for each task
         const li = document.createElement('li');
         li.setAttribute('data-id', task.id);
@@ -37,6 +43,11 @@ document.addEventListener('DOMContentLoaded', () => {
         if (task.completed)
             li.classList.add("completed");
 
+        // tasks are appened into the unordered list
+        todoList.append(li);
+
+        // Handling some events inside the render function to get task value using closure
+
         // if tasks are clicked means toggle the completed value
         li.addEventListener("click", (e) => {
             if (e.target.tagName === "BUTTON") return;
@@ -46,13 +57,15 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         // if delete button is clicked
-        
-
-        // tasks are appened into the unordered list
-        todoList.append(li);
+        li.querySelector('button').addEventListener("click", (e) => {
+            e.stopPropagation(); // prevent toggle from firing
+            tasks = tasks.filter(t => t.id !== task.id);
+            li.remove();
+            saveTasks();
+        });
     }
 
-    // save tasks from array into local storage
+    // save tasks into local storage from the array 
     function saveTasks() {
         localStorage.setItem('tasks', JSON.stringify(tasks));
     }
